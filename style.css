@@ -1,0 +1,199 @@
+/* Import Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global Style */
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Section Style */
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px;
+}
+
+/* Header Style */
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:15px 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header Logo Style */
+header .logo{
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .5s;
+}
+
+header .logo:hover{
+  color: #03a9f4;
+}
+
+/* Header Navigation Menu Style */
+
+header .navigation{
+  position: relative;
+  display: flex;
+}
+
+header .navigation li{
+  list-style: none;
+}
+
+header .navigation li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 40px;
+  transition: 0.5s;
+}
+
+header .navigation li a:hover{
+  color: #03a9f4;
+  transform: translateY(-15px);
+}
+
+/* Content Style */
+.content{
+  max-width: 600px;
+}
+
+.content .contentBox h2{
+  color: #fff;
+  font-size: 4em;
+  line-height: 1;
+}
+
+.content .contentBox p{
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.1em;
+  margin: 20px 0;
+}
+
+.content .contentBox a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #03a9f4;
+  text-align: center;
+  padding:10px 30px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: .5s;
+}
+
+.content .contentBox a:hover{
+  border-radius: 20px;
+}
+
+/* Social Media Icon Style */
+ul.sci{
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+}
+
+ul.sci li{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.sci li a{
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  transform: scale(.5);
+  filter: invert(1);
+  transition: .5s;
+}
+
+ul.sci li a:hover{
+  transform: translateY(-15px);
+}
+
+/* End Styling */
+
+/* Start Responsive Style */
+@media (max-width:991px) {
+  section{
+    padding: 40px;
+    background: url(bg2.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  header{
+    padding: 15px 40px;
+  }
+  header .navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header .navigation.active{
+   display: flex;
+  }
+  header .navigation li a{
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  .content .contentBox h2{
+    font-size: 2.5em;
+  }
+  .content .contentBox p{
+    font-size: 1em;
+  }
+  div.toggleMenu{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: url(menu.png);
+    background-position: center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 11;
+  }
+  div.toggleMenu.active{
+    background: url(close.png);
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Endig the style of the page */
+
